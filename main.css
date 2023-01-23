@@ -6,8 +6,8 @@
     /* background-origin: border-box;
     background-clip: border-box; */
     /* background-image: radial-gradient(ellipse closest-corner at 30% 50%, purple, rgb(255, 94, 0), rgb(89, 0, 255)); */
-    width: 100%;
-    height: 528px;
+    width: 100vw;
+    height: 40vh;
     padding: 10px;
     margin-top: 2.75rem;
     position: relative;
