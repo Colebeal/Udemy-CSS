@@ -7,16 +7,10 @@
     background-clip: border-box; */
     /* background-image: radial-gradient(ellipse closest-corner at 30% 50%, purple, rgb(255, 94, 0), rgb(89, 0, 255)); */
     width: 100vw;
-    height: 40vh;
+    height: 33vh;
     padding: 10px;
-    margin-top: 2.75rem;
     position: relative;
 }   
-
-.section-title { 
-    color: #15234B;
-    text-align: center;
-}
 
 #product-overview h1 {
     color: white;
@@ -24,28 +18,44 @@
     position: absolute;
     bottom: 5%;
     left: 3%;
+    font-size: 1.6rem;
 }
 
-.plan__list{
-    width: 80%;
-    margin: auto;
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview {
+        height: 40vh;
+        background-position: 10% 75%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+
+.section-title { 
+    color: #15234B;
     text-align: center;
 }
+
+/* .plan__list{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+} */
 
 .plan {
     background: #C4A596;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
+    margin: 0.5rem 0;
+    width: 100%;
 }
 
 .plan--higlighted{
     background: #8e3f24;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 
 .plan__annotation{
@@ -81,10 +91,31 @@
     margin: 0.5rem 0;
 }
 
+@media (min-width: 40rem) {
+    .plan__list{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .plan {
+        display: inline-block;
+        width: 30%;
+        margin: auto;
+        vertical-align: middle;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
+
+    .plan--higlighted{
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
 #key-features {
     background: #E8E8FF;
     padding: 1rem;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
 
 }
 
@@ -97,12 +128,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-.key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
 }
 
 .key-feature__image {
@@ -121,6 +146,16 @@
     text-align: center;
     font-size: 1.2rem;
 
+}
+
+@media (min-width:40rem) {
+    
+    .key-feature {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        max-width: 25rem;
+    }
 }
 
 /* JavaScript Modal */
@@ -173,3 +208,4 @@
     background: #ff5454;
     border-color: #ff5454;
   }
+  

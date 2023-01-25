@@ -11,6 +11,12 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+main {
+    min-height: calc(100vh - 3rem - 8rem);
+    margin-top: 3rem;
+}
+
+
 .backdrop {
     display: none;
     position: fixed;
@@ -67,22 +73,17 @@ body::-webkit-scrollbar {
     color: #15234B;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem;
-    height: 1.5rem;
+    height: 3rem;
     display: inline-block;
     vertical-align: middle;
 }
 
 .main-header__brand img {
     height: 100%;
-
 }
 
 .main-nav {
-    display: inline-block;
-    text-align: right;
-    width: calc(100% - 122px);
-    vertical-align: middle;
+    display: none;
 }
 
 .main-nav__items {
@@ -128,6 +129,29 @@ body::-webkit-scrollbar {
     border: none;
 
 }
+
+@media (min-width:40rem){
+    .toggle-button{
+        display: none;
+    }
+
+    .main-header__brand {
+        height: 3rem;
+    }
+
+    .main-header__brand img {
+        height: 100%;
+    }
+
+    .main-nav {
+        display: inline-block;
+        text-align: right;
+        width: calc(100% - 60px);
+        vertical-align: middle;
+    }
+
+}
+
 /* FOOTER STYLES */
 
 .main-footer {
@@ -145,8 +169,8 @@ body::-webkit-scrollbar {
 }
 
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    display: block;
+    margin: 1rem 0;
 }
 
 .main-footer__link a {
@@ -159,6 +183,13 @@ body::-webkit-scrollbar {
     color: #E8E8FF;
     cursor: pointer;
 
+}
+
+@media (min-width:40rem) {
+    .main-footer__link {
+        display: inline-block;
+        margin: 0 1rem;
+    }
 }
 
 /* Moblie Navigation */
