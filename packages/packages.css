@@ -19,12 +19,14 @@ main {
     width: 80%;
     text-decoration: none;
     position: relative;
+    overflow: hidden;
 }
 
 .package:hover,
 .package:active {
     border-color: #8E3F24;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    animation: rise 1s ease-out forwards;
 }
 
 
@@ -39,11 +41,16 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
+    margin: 0rem;
     font-size: 0.8rem;
     color: white;
     background-color: #8E3F24;
     padding: 0.5rem;
+    transform: rotatez(45deg) translate(3.7rem, -1rem);
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
+
 }
 
 /* .package__title {
@@ -60,10 +67,11 @@ main {
 .package__info {
     color: #15234B;
     background: white;
-    font-size: 1.2rem;
     border: 1px solid #15234B;
     padding: 1.1rem;
     margin: 1.1rem 0;
+    font: 600 1.2rem 'Montserrat', sans-serif;
+    /* font: font-style font-variant font-weight font-size/line-height font-family; */
 }
 
 .clearfix {
@@ -115,5 +123,17 @@ main {
 
     #free {
         border-right: 4px solid #15234B;;
+    }
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
